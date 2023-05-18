@@ -35,6 +35,18 @@ Lower Limit: mean - (3 * standard deviation) = 0 - (3 * 1) = -3
 
 ## No. of clusters using Elbow method
 <img width="400" alt="Screenshot 2023-05-18 at 1 47 50 PM" src="https://github.com/ayushs0911/Customer-Personality-Analysis/assets/122048067/073af7a3-946a-492a-978d-6798e6ef10b3"><br>
+
+## Algorithm
+```
+AC = AgglomerativeClustering(n_clusters = 4)
+
+ypred = AC.fit_predict(PCA_ds)
+PCA_ds["Clusters"] = ypred
+
+#adding the clusters fearure to the orignal dataframe
+data["Clusters"] = ypred
+```
+
 ## Plot of Clusters
 <img width="400" alt="Screenshot 2023-05-18 at 1 49 00 PM" src="https://github.com/ayushs0911/Customer-Personality-Analysis/assets/122048067/bd44bd71-d0e2-4f63-8000-a932ae78041e">
 
